@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training TR-102 Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('p1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #000000, #434343);
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        header img {
+            height: 50px;
+            margin: 5px 0;
+            max-width: 100%;
+        }
+        header .home-button {
+            background-color: #3c566f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        header .home-button:hover {
+            background-color: #000000;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .project-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .project-button {
+            background-color: #888954;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        .project-button:hover {
+            background-color: #666;
+        }
+        nav a:hover {
+            background-color: #2980b9;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        .pdf-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .gallery {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .gallery img.active {
+            display: block;
+            opacity: 1;
+        }
+        .gallery .caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #2c3e50;
+            font-size: 16px;
+            display: none;
+        }
+        .gallery .caption.active {
+            display: block;
+        }
+        .certificate-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .certificate-container img {
+            max-width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: linear-gradient(to right, #434343, #000000);
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            header .home-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            header img {
+                height: 40px;
+            }
+            .pdf-container iframe {
+                height: 400px;
+            }
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://www.gndec.ac.in/"><img src="logo.png" alt="GNDEC Logo"></a>
+            <a href="#" class="home-button" onclick="showSection('home')">Daily Report</a>
+            <a href="https://prasarbharati.gov.in/doordarshan/"><img src="logo1.png" alt="DD Logo"></a>
+        </header>
+        
+
+        <section id="home" class="section active">
+            <h1>Training TR-102 Report</h1>
+            <p>By Jasleen Kaur, URN 2302723 <br> Guru Nanak Dev Engineering College Ludhiana</p>
+            <h2>6 Week training at <br> Ansh Infotech Model town,Ludhiana</h2>
+        </section>
+        <nav>
+            
+            <a href="#" onclick="showSection('day1')">Day 1</a>
+            <a href="#" onclick="showSection('day2')">Day 2</a>
+            <a href="#" onclick="showSection('day3')">Day 3</a>
+            <a href="#" onclick="showSection('day4')">Day 4</a>
+            <a href="#" onclick="showSection('day5')">Day 5</a>
+            <a href="#" onclick="showSection('day6')">Day 6</a>
+            <a href="#" onclick="showSection('day7')">Day 7</a>
+            <a href="#" onclick="showSection('day8')">Day 8</a>
+            <a href="#" onclick="showSection('day9')">Day 9</a>
+            <a href="#" onclick="showSection('day10')">Day 10</a>
+            <a href="#" onclick="showSection('day11')">Day 11</a>
+            <a href="#" onclick="showSection('day12')">Day 12</a>
+            <a href="#" onclick="showSection('day13')">Day 13</a>
+            <a href="#" onclick="showSection('day14')">Day 14</a>
+            <a href="#" onclick="showSection('day15')">Day 15</a>
+            <a href="#" onclick="showSection('day16')">Day 16</a>
+            <a href="#" onclick="showSection('day17')">Day 17</a>
+            <a href="#" onclick="showSection('day18')">Day 18</a>
+            <a href="#" onclick="showSection('day19')">Day 19</a>
+            <a href="#" onclick="showSection('day20')">Day 20</a>
+            <a href="#" onclick="showSection('day21')">Day 21</a>
+            <a href="#" onclick="showSection('day22')">Day 22</a>
+            <a href="#" onclick="showSection('day23')">Day 23</a>
+            <a href="#" onclick="showSection('day24')">Day 24</a>
+            <a href="#" onclick="showSection('day25')">Day 25</a>
+            <a href="#" onclick="showSection('day26')">Day 26</a>
+            <a href="#" onclick="showSection('day27')">Day 27</a>
+            <a href="#" onclick="showSection('day28')">Day 28</a>
+            <a href="#" onclick="showSection('day29')">Day 29</a>
+            <a href="#" onclick="showSection('day30')">Day 30</a>
+            <a href="#" onclick="showSection('day31')">Day 31</a>
+            <a href="#" onclick="showSection('day32')">Day 32</a>
+            <a href="#" onclick="showSection('day33')">Day 33</a>
+            <a href="#" onclick="showSection('day34')">Day 34</a>
+            <a href="#" onclick="showSection('day35')">Day 35</a>
+            <a href="#" onclick="showSection('day36')">Day 36</a>
+            <a href="#" onclick="showSection('day37')">Day 37</a>
+            <a href="#" onclick="showSection('day38')">Day 38</a>
+            <a href="#" onclick="showSection('day39')">Day 39</a>
+            <br>
+             <br>
+            <a style="background-color: rgb(0, 199, 156);" href="#" onclick="showSection('projects')">Projects</a>
+            <a style="background-color: rgb(0, 199, 156);" href="#" onclick="showSection('Final-Report')">Final Report </a>
+            <a style="background-color: rgb(0, 199, 156);" href="#" onclick="showSection('certificate')">Training Certificate</a>
+    
+        </nav>
+        <section id="certificate" class="section">
+            <h1>Certificate</h1>
+            <div class="certificate-container">
+                <img src="Certificate1.jpg" alt="Training Certificate">
+            </div>
+        </section>  
+        <section id="Final-Report" class="section">
+            <h1>Final Report</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\project file.pdf"></iframe>
+            </div>
+        </section>  
+        <section id="day1" class="section">
+            <h1>Training Report Day 1</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day1.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day2" class="section">
+            <h1>Training Report Day 2</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day2.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day3" class="section">
+            <h1>Training Report Day 3</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day3.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day4" class="section">
+            <h1>Training Report Day 4</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day4.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day5" class="section">
+            <h1>Training Report Day 5</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day5.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day6" class="section">
+            <h1>Training Report Day 6</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day6.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day7" class="section">
+            <h1>Training Report Day 7</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day7.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day8" class="section">
+            <h1>Training Report Day 8</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day8.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day9" class="section">
+            <h1>Training Report Day 9</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day9.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day10" class="section">
+            <h1>Training Report Day 10</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day10.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day11" class="section">
+            <h1>Training Report Day 11</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day11.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day12" class="section">
+            <h1>Training Report Day 12</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day12.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day13" class="section">
+            <h1>Training Report Day 13</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day 13.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day14" class="section">
+            <h1>Training Report Day 14</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day 14.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="day15" class="section">
+            <h1>Training Report Day 15</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day 15.pdf"></iframe>
+            </div>  
+        </section>
+
+        <section id="day16" class="section">
+            <h1>Training Report Day 16</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day16.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day17" class="section">
+            <h1>Training Report Day 17</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day17.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day18" class="section">
+            <h1>Training Report Day 18</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day18.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day19" class="section">
+            <h1>Training Report Day 19</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day19.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day20" class="section">
+            <h1>Training Report Day 20</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day20.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day21" class="section">
+            <h1>Training Report Day 21</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day21.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day22" class="section">
+            <h1>Training Report Day 22</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day22.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day23" class="section">
+            <h1>Training Report Day 23</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day23.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day24" class="section">
+            <h1>Training Report Day 24</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day24.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day25" class="section">
+            <h1>Training Report Day 25</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day5.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day26" class="section">
+            <h1>Training Report Day 26</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day26.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day27" class="section">
+            <h1>Training Report Day 27</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day27.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day28" class="section">
+            <h1>Training Report Day 28</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day28.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day29" class="section">
+            <h1>Training Report Day 29</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day29.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day30" class="section">
+            <h1>Training Report Day 30</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day30.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day31" class="section">
+            <h1>Training Report Day 31</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day31.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day32" class="section">
+            <h1>Training Report Day 32</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day32.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day33" class="section">
+            <h1>Training Report Day 33</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day33.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day34" class="section">
+            <h1>Training Report Day 34</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day34.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day35" class="section">
+            <h1>Training Report Day 35</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day35.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day36" class="section">
+            <h1>Training Report Day 36</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day36.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day37" class="section">
+            <h1>Training Report Day 37</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day37.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day38" class="section">
+            <h1>Training Report Day 38</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day38.pdf"></iframe>
+            </div>
+        </section>
+        <section id="day39" class="section">
+            <h1>Training Report Day 39</h1>
+            <div class="pdf-container">
+                <iframe src="c:\Users\DELL\Desktop\Daily Dairy\day39.pdf"></iframe>
+            </div>
+        </section>
+
+        
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <ul>
+            <li>
+            <div class="project-buttons">
+                <a href="http://127.0.0.1:5000/" class="project-button">Chatbot</a>
+            </div>
+            <div class="project-details">
+            
+                <h2>Chatbot Project</h2>
+                <p>Creating a chatbot involves several key components, from choosing a platform to defining its purpose, programming the interactions, and integrating any necessary machine learning or NLP (Natural Language Processing) models. </p>
+                <b>Features</b>
+                <ol>
+                    <li>Natural Language Processing (NLP): Allows the chatbot to understand, interpret, and respond to user queries in a human-like manner. NLP helps in analyzing text input, identifying intent, and extracting relevant information.</li>
+                    <li>24/7 Availability: Chatbots are always accessible, providing users with instant responses at any time, which improves customer service and user satisfaction.</li>
+                    <li>Personalization: By leveraging user data and preferences, chatbots can deliver customized responses, making interactions more engaging and relevant..</li>
+                    <li>Seamless Integration: Chatbots can connect with various systems like CRM, databases, and APIs, enabling them to retrieve and update information or perform actions (e.g., checking order status, booking appointments) directly within the chat interface.</li>
+                </ol>
+            </li>
+            </ul>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        const captions = document.querySelectorAll('.gallery .caption');
+
+        function showSlide(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                captions[i].style.display = 'none';
+            });
+            images[index].classList.add('active');
+            captions[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 4000); // Change image every 4 seconds
+    </script>
+</body>
+</html>
